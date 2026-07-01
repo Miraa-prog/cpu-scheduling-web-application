@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Algorithm</title>
+
+    <link rel="stylesheet"
+href="{{ url_for('static', filename='page3.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- TITLE -->
+        <h1>Select Scheduling Algorithm</h1>
+
+        <p class="subtitle">
+            Choose the scheduling algorithm you want to simulate
+        </p>
+
+        <!-- CARDS -->
+        <div class="grid">
+
+            <!-- FCFS -->
+            <div class="card"
+                onclick="selectAlgorithm(this,'FCFS')">
+
+                <div class="icon blue">⬤</div>
+
+                <h2>First Come First Serve (FCFS)</h2>
+
+                <p>
+                    Processes are executed based on arrival order.
+                </p>
+
+            </div>
+
+            <!-- RR -->
+            <div class="card"
+                onclick="selectAlgorithm(this,'Round Robin')">
+
+                <div class="icon purple">⬤</div>
+
+                <h2>Round Robin (RR)</h2>
+
+                <p>
+                    Each process gets a fixed time quantum.
+                </p>
+
+            </div>
+
+            <!-- Priority NP -->
+            <div class="card"
+                onclick="selectAlgorithm(this,'Priority Non-Preemptive')">
+
+                <div class="icon pink">⬤</div>
+
+                <h2>Priority (Non-Preemptive)</h2>
+
+                <p>
+                    Highest priority executes first without interruption.
+                </p>
+
+            </div>
+
+            <!-- Priority P -->
+            <div class="card"
+                onclick="selectAlgorithm(this,'Priority Preemptive')">
+
+                <div class="icon green">⬤</div>
+
+                <h2>Priority (Preemptive)</h2>
+
+                <p>
+                    Higher priority processes can interrupt execution.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- SELECTED -->
+        <!-- SELECTED -->
+<div class="selected-box">
+
+    <span id="selectedText">
+        No algorithm selected
+    </span>
+
+</div>
+
+<!-- TIME QUANTUM -->
+
+<div id="timeQuantumBox" class="quantum-box">
+
+    <label>
+        Time Quantum
+    </label>
+
+    <input
+        type="number"
+        id="timeQuantum"
+        placeholder="Enter Time Quantum"
+    >
+
+</div>
+
+        <!-- BUTTONS -->
+        <div class="buttons">
+
+            <button class="run-btn"
+                onclick="runSimulation()">
+
+                ▶ Run Simulation
+
+            </button>
+
+            <button class="back-btn"
+                onclick="goBack()">
+
+                ← Back
+
+            </button>
+
+        </div>
+
+    </div>
+
+    
+    <script src="{{ url_for('static', filename='page3.js') }}"></script>
+
+</body>
+
+</html>

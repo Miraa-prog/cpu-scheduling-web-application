@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CPU Scheduling Simulator</title>
+
+  <!-- CSS FILE -->
+  <link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- TITLE -->
+
+    <h1 class="title">
+      CPU Scheduling Simulator
+    </h1>
+
+    <p class="subtitle">
+      Understand how CPU scheduling works step by step
+    </p>
+
+    <!-- CARD -->
+
+    <div class="card">
+
+      <h2 class="card-title">
+        Key Concepts
+      </h2>
+
+      <!-- BOX 1 -->
+
+      <div class="concept-box">
+
+        <div class="concept-title">
+          Arrival Time
+        </div>
+
+        <div class="concept-desc">
+          The time when a process enters the ready queue and becomes ready for execution.
+        </div>
+
+      </div>
+
+      <!-- BOX 2 -->
+
+      <div class="concept-box">
+
+        <div class="concept-title">
+          Burst Time
+        </div>
+
+        <div class="concept-desc">
+          The total CPU time required by a process to complete execution.
+        </div>
+
+      </div>
+
+      <!-- BOX 3 -->
+
+      <div class="concept-box">
+
+        <div class="concept-title">
+          Priority
+        </div>
+
+        <div class="concept-desc">
+          A scheduling factor where lower values indicate higher importance.
+        </div>
+
+      </div>
+
+      <!-- BOX 4 -->
+
+      <div class="concept-box">
+
+        <div class="concept-title">
+          Task Type
+        </div>
+
+        <div class="concept-desc">
+          Specifies whether the process is CPU-bound or I/O-bound.
+        </div>
+
+      </div>
+
+      <!-- BUTTON -->
+
+      <button class="start-btn" onclick="startSimulation()">
+
+        Start Simulation
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- JS FILE -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

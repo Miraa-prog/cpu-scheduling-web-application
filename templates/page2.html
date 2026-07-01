@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Add Processes</title>
+
+    <link rel="stylesheet"
+href="{{ url_for('static', filename='/page2.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- TITLE -->
+
+        <h1 class="title">
+            Add Processes
+        </h1>
+
+        <p class="subtitle">
+            Enter process information for scheduling simulation
+        </p>
+
+        <!-- FORM CARD -->
+
+        <div class="card">
+
+            <!-- FORM -->
+
+            <div class="form-grid">
+
+                <!-- PID -->
+
+                <div class="input-group">
+
+                    <label>Process ID</label>
+
+                    <input
+                        type="text"
+                        id="pid"
+                        placeholder="P1"
+                    >
+
+                </div>
+
+                <!-- ARRIVAL -->
+
+                <div class="input-group">
+
+                    <label>Arrival Time</label>
+
+                    <input
+                        type="number"
+                        id="arrival"
+                        placeholder="0"
+                    >
+
+                </div>
+
+                <!-- BURST -->
+
+                <div class="input-group">
+
+                    <label>Burst Time</label>
+
+                    <input
+                        type="number"
+                        id="burst"
+                        placeholder="5"
+                    >
+
+                </div>
+
+                <!-- PRIORITY -->
+
+                <div class="input-group">
+
+                    <label>Priority</label>
+
+                    <input
+                        type="number"
+                        id="priority"
+                        placeholder="1"
+                    >
+
+                </div>
+
+                <!-- TYPE -->
+
+                <div class="input-group">
+
+                    <label>Task Type</label>
+
+                    <select id="type">
+
+                        <option>
+                            CPU-bound
+                        </option>
+
+                        <option>
+                            I/O-bound
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- NAME -->
+
+                <div class="input-group">
+
+                    <label>Process Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Process A"
+                    >
+
+                </div>
+
+            </div>
+
+            <!-- ADD BUTTON -->
+
+            <button
+                class="add-btn"
+                onclick="addProcess()"
+            >
+
+                + Add Process
+
+            </button>
+
+        </div>
+
+        <!-- TABLE -->
+
+        <div class="table-card">
+
+            <table id="processTable">
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Arrival</th>
+
+                        <th>Burst</th>
+
+                        <th>Priority</th>
+
+                        <th>Type</th>
+
+                        <th>Name</th>
+
+                    </tr>
+
+                </thead>
+
+                <!-- IMPORTANT -->
+
+                <tbody id="tableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- NAVIGATION BUTTONS -->
+
+        <div class="buttons">
+
+            <!-- BACK -->
+
+            <button
+                class="back-btn"
+                onclick="goHome()"
+            >
+
+                Back
+
+            </button>
+
+            <!-- NEXT -->
+
+            <button
+                class="next-btn"
+                onclick="nextPage()"
+            >
+
+                Next
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- JS -->
+
+    <script src="{{ url_for('static', filename='/page2.js') }}"></script>
+
+</body>
+
+</html>

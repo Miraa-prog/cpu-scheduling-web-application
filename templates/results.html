@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Simulation Results</title>
+
+    <link rel="stylesheet"
+href="{{ url_for('static', filename='/results.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- TITLE -->
+
+        <h1>Simulation Results</h1>
+
+        <p class="subtitle">
+            نتائج المحاكاة
+        </p>
+
+        <!-- INFO CARD -->
+
+        <div class="info-card">
+
+            <h2 id="algoName">
+                Selected Algorithm: FCFS
+            </h2>
+
+            <p id="totalProcesses">
+                Total Processes: 0
+            </p>
+
+        </div>
+
+        <!-- BUTTONS -->
+
+        <div class="buttons">
+
+            <button onclick="goBack()">
+                ← Back
+            </button>
+
+            <button onclick="saveResults()">
+                💾 Save Results
+            </button>
+
+            <button onclick="tryAnother()">
+                🔄 Try Another
+            </button>
+
+            <button onclick="compareAll()">
+                📊 Compare All
+            </button>
+
+        </div>
+
+        <!-- GANTT CHART -->
+
+        <div class="card">
+
+            <h2>Gantt Chart</h2>
+
+            <div class="gantt" id="ganttChart">
+
+            </div>
+
+            <div class="times" id="ganttTimes">
+
+            </div>
+
+        </div>
+
+        <!-- TABLE -->
+
+        <div class="card">
+
+            <h2>Process Results</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Process</th>
+
+                            <th>Arrival Time</th>
+
+                            <th>Burst Time</th>
+
+                            <th>Priority</th>
+
+                            <th>Completion Time</th>
+
+                            <th>Turnaround Time</th>
+
+                            <th>Waiting Time</th>
+
+                            <th>Response Time</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="resultsBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- STATISTICS -->
+
+        <div class="stats-container">
+
+            <div class="stat-card">
+
+                <h3 id="avgWT">0</h3>
+
+                <p>Average WT</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3 id="avgTAT">0</h3>
+
+                <p>Average TAT</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3 id="avgRT">0</h3>
+
+                <p>Average RT</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='/results.js') }}"></script>
+
+</body>
+
+</html>
